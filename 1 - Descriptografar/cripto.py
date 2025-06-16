@@ -48,7 +48,7 @@ def verificar_assinatura():
     except rsa.VerificationError:
         print("Falha na assinatura!")
 
-# gerar_chaves()
+gerar_chaves()
 # print(chave_publica())
 # print(privkey.n == chave_privada().n)
 # print()
@@ -56,4 +56,6 @@ def verificar_assinatura():
 # print(ler_mensagem())
 # print(descriptografar_mensagem())
 # print(ler_assinatura())
-verificar_assinatura()
+# verificar_assinatura()
+# print()
+# print(privkey)
