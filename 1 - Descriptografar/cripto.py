@@ -6,11 +6,11 @@ pubkey, privkey = rsa.newkeys(512)
 def gerar_chaves():
 
     # Salvando a chave pública no arquivo.pem
-    with open("/workspaces/Criptografia/1 - Descriptografar/chave_publica_b.pem", "wb") as arquivo:
+    with open("/workspaces/Criptografia/1 - Descriptografar/chave_publica_a.pem", "wb") as arquivo:
         arquivo.write(pubkey.save_pkcs1("PEM"))
 
     # Salvando a chave privada no arquivo.pem
-    with open("/workspaces/Criptografia/1 - Descriptografar/chave_privada_b.pem", "wb") as arquivo:
+    with open("/workspaces/Criptografia/1 - Descriptografar/chave_privada_a.pem", "wb") as arquivo:
         arquivo.write(privkey.save_pkcs1("PEM"))
 
 
@@ -22,12 +22,12 @@ def ler_mensagem():
 
 
 def chave_privada():
-    with open("/workspaces/Criptografia/1 - Descriptografar/chave_privada_b.pem", "rb") as arquivo:
+    with open("/workspaces/Criptografia/1 - Descriptografar/chave_privada_a.pem", "rb") as arquivo:
         chave_privada = rsa.PrivateKey.load_pkcs1(arquivo.read())
         return chave_privada
 
 def chave_publica():
-    with open("/workspaces/Criptografia/1 - Descriptografar/chave_publica_a.pem", "rb") as file:
+    with open("/workspaces/Criptografia/1 - Descriptografar/chave_publica_b.pem", "rb") as file:
         chave_publica = rsa.PublicKey.load_pkcs1(file.read())
         return chave_publica
 

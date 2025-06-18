@@ -17,7 +17,7 @@ import base64
 def escrever_mensagem():
     #  escrevendo uma mensagem no arquivo.txt
     with open("/workspaces/Criptografia/2 - Criptografar/mensagem.txt", "w") as arquivo:
-        arquivo.write("mensagem para Jefferson")
+        arquivo.write("mensagem para Erik")
 
 
 def ler_mensagem():
@@ -28,13 +28,13 @@ def ler_mensagem():
 
 
 def chave_privada():
-    with open("/workspaces/Criptografia/1 - Descriptografar/chave_privada_b.pem", "rb") as arquivo:
+    with open("/workspaces/Criptografia/1 - Descriptografar/chave_privada_a.pem", "rb") as arquivo:
         chave_privada = rsa.PrivateKey.load_pkcs1(arquivo.read())
         return chave_privada
     
 
 def chave_publica():
-    with open("/workspaces/Criptografia/2 - Criptografar/minha_chave_publica.pem", "rb") as arquivo:
+    with open("/workspaces/Criptografia/2 - Criptografar/chave_publica_b.pem", "rb") as arquivo:
         chave_publica = rsa.PublicKey.load_pkcs1(arquivo.read())
         return chave_publica
 
